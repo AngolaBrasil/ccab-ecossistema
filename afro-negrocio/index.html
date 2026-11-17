@@ -397,6 +397,12 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
   <a class="cb-home" href="https://clean-sienna-hyena-18.hostingersite.com/"><img src="/assets/fb65325bf8de93.png" alt=""><span>Câmara de Comércio<br>Angola Brasil</span></a>
   <ul><li><a href="https://clean-sienna-hyena-18.hostingersite.com/afro-negrocio/" aria-current="page">Afro Negrócio</a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/podcast/">Roda de Negrócios</a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/estrutura-360/">ESTRUTURA 360°</a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/academia/">Academia</a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/caminter/">CAMINTER</a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/conteudos/">Conteúdos</a></li></ul>
 </div></nav>
+<style id="an-1711">
+.picks{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0 .4rem}
+.pick{font:inherit;font-size:.95rem;font-weight:600;padding:.75rem 1.1rem;border-radius:999px;border:1px solid rgba(245,183,59,.55);background:transparent;color:inherit;cursor:pointer;transition:background .2s,color .2s}
+.pick:hover,.pick:focus-visible{background:#F5B73B;color:#081445;border-color:#F5B73B}
+.who p{margin:.2rem 0 .6rem}
+</style>
 <style id="ccab-identidade">h1,h2,h3,h4{letter-spacing:-.005em}
 :root{--black:#081445;--graphite:#0B1B58;--graphite-2:#10266F;--line-dark:#1B3384;--paper:#F5F1E8;--paper-2:#ECE5D3;--ink:#081445;--muted-dark:#B4BEDA;--muted-light:#4A5578;--gold-deep:#8A5A00}
 [style*="--font-display"],h1,h2,h3{font-weight:600}
@@ -441,7 +447,7 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
       <h1 id="h-hero">Sua empresa mais forte. <em>Suas conexões mais longe.</em></h1>
       <p class="lead">Unimos estratégia, marketing e relacionamento empresarial para fortalecer sua marca e desenvolver oportunidades entre Brasil e Angola.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#objetivo" data-track="diagnostico" data-origem="hero-principal">Quero fortalecer minha empresa</a>
+        <a class="btn btn-primary" href="#solucoes" data-track="diagnostico" data-origem="hero-principal">Quero fortalecer minha empresa</a>
         <a class="btn btn-ghost" href="#parcerias" data-track="parceria" data-origem="hero-secundario">Quero ser parceiro</a>
       </div>
       <p class="pending" style="margin-top:1.25rem">Vídeo: confirmar legendas no YouTube. Para fundo, um MP4 curto e leve (10 a 20 s, sem áudio) carrega melhor que o YouTube</p>
@@ -466,38 +472,19 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
   </div>
 </section>
 
-<!-- 3. ESCOLHA SEU OBJETIVO -->
-<section class="section on-light" id="objetivo" aria-labelledby="h-obj">
-  <div class="wrap">
-    <p class="eyebrow">Por onde começar</p>
-    <h2 class="h2" id="h-obj">Escolha seu objetivo</h2>
-    <p class="lead">Selecione o que sua empresa precisa agora. Levamos você à solução correspondente e já indicamos esse interesse no formulário.</p>
-    <div class="goals">
-      <button class="goal" type="button" data-interest="marketing" data-goto="marketing" data-origem="objetivo-clientes">
-        <span class="goal-t">Quero atrair clientes</span>
-        <span class="goal-s">Conteúdo, campanhas e geração de leads.</span>
-        <span class="goal-go">Ver a solução <span aria-hidden="true">→</span></span>
-      </button>
-      <button class="goal" type="button" data-interest="marketing" data-goto="estrategia" data-origem="objetivo-marca">
-        <span class="goal-t">Quero fortalecer minha marca</span>
-        <span class="goal-s">Diagnóstico, posicionamento e proposta de valor.</span>
-        <span class="goal-go">Ver a solução <span aria-hidden="true">→</span></span>
-      </button>
-      <button class="goal" type="button" data-interest="expansao" data-goto="conexoes" data-origem="objetivo-mercados">
-        <span class="goal-t">Quero explorar novos mercados</span>
-        <span class="goal-s">Preparação comercial e articulação entre Brasil e Angola.</span>
-        <span class="goal-go">Ver a solução <span aria-hidden="true">→</span></span>
-      </button>
-    </div>
-  </div>
-</section>
-
 <!-- 4. SOLUÇÕES -->
 <section class="section on-dark" id="solucoes" aria-labelledby="h-sol">
   <div class="wrap">
-    <p class="eyebrow">Soluções da Afro Negrócio</p>
-    <h2 class="h2 wide" id="h-sol">Quatro frentes de trabalho. Você escolhe por onde começar.</h2>
-    <p class="lead">Cada frente pode ser contratada de forma isolada ou combinada. O escopo é definido depois de entender a sua empresa.</p>
+    <p class="eyebrow">Soluções</p>
+      <h2 class="h2 wide" id="h-sol">Quatro frentes de trabalho. Você escolhe por onde começar.</h2>
+      <p class="lead">Selecione a seguir o que sua empresa necessita agora. Levamos você à solução correspondente e já indicamos esse interesse no formulário.</p>
+      <div class="picks" role="group" aria-label="Objetivo da empresa">
+        <button class="pick" type="button" data-interest="marketing" data-goto="marketing" data-origem="objetivo-clientes">Quero atrair clientes</button>
+        <button class="pick" type="button" data-interest="marketing" data-goto="estrategia" data-origem="objetivo-marca">Quero fortalecer minha marca</button>
+        <button class="pick" type="button" data-interest="site" data-goto="digital" data-origem="objetivo-digital">Quero organizar minha estrutura digital</button>
+        <button class="pick" type="button" data-interest="expansao" data-goto="comunicacao" data-origem="objetivo-mercados">Quero explorar novos mercados</button>
+      </div>
+      <p class="note">Cada frente pode ser contratada de forma isolada ou combinada. O escopo é definido depois de entender a sua empresa.</p>
     <div class="solutions">
       <article class="sol" id="estrategia" tabindex="-1">
         <p class="sol-tags">Estratégia e posicionamento</p>
@@ -566,24 +553,26 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
       </div>
     </div>
     <div class="who">
-      <div>
-        <h3>O que a Afro Negrócio faz</h3>
-        <ul>
-          <li>Serviços de marketing, comunicação e estrutura digital contratados pela empresa.</li>
-          <li>Proposta, escopo e condições próprios para cada cliente.</li>
-          <li>Projetos de relacionamento empresarial.</li>
-        </ul>
+        <div>
+          <h3>A Afro Negrócio faz parte da Câmara</h3>
+          <p>A Afro Negrócio é a agência da Câmara de Comércio Angola Brasil e responde pelo serviço de Marketing, Comunicação e Expansão Digital.</p>
+          <ul>
+            <li>Marketing, comunicação e estrutura digital para empresas que atuam entre Angola e Brasil.</li>
+            <li>Proposta, escopo e condições definidos para cada empresa.</li>
+            <li>Projetos de relacionamento empresarial com a rede da Câmara.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Com toda a estrutura da Câmara</h3>
+          <p>Quem trabalha com a Afro Negrócio conta também com os demais serviços da Câmara.</p>
+          <ul>
+            <li>Internacionalização de empresas e missões empresariais.</li>
+            <li>Networking, conexões estratégicas e eventos.</li>
+            <li>Consultoria e inteligência de mercado.</li>
+          </ul>
+          <a class="link-arrow" style="justify-self:start" href="https://clean-sienna-hyena-18.hostingersite.com/#servicos">Todos os serviços da Câmara <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div>
-        <h3>O que a Câmara faz</h3>
-        <ul>
-          <li>Atuação institucional e articulação bilateral entre Angola e Brasil.</li>
-          <li>Os serviços institucionais da Câmara são descritos no site da Câmara.</li>
-        </ul>
-        <a class="link-arrow" style="justify-self:start" href="https://clean-sienna-hyena-18.hostingersite.com/#servicos" target="_blank" rel="noopener">Serviços da Câmara <span aria-hidden="true">→</span></a>
-        <p class="pending">Validar a redação da divisão agência × Câmara</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -633,7 +622,7 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
     </div>
     <h3 class="pc-row-title">Cortes rápidos</h3>
     <ul class="pc-rail" id="pc-rail" aria-label="Cortes do podcast">
-      <li class="pc-li"><a class="pc-more" href="https://www.youtube.com/@chamberangolabrasil" target="_blank" rel="noopener"><span class="pc-more-k">Mais conteúdos</span><span class="pc-more-t">Ver o canal no YouTube <span aria-hidden="true">→</span></span></a></li>
+      <li class="pc-li"><a class="pc-more" href="https://www.youtube.com/watch?v=ruBPpy2R1FU" target="_blank" rel="noopener"><span class="pc-more-k">Vídeo institucional</span><span class="pc-more-t">Assistir ao vídeo da Câmara <span aria-hidden="true">→</span></span></a></li>
     </ul>
     <p class="pc-all"><a class="btn btn-primary" href="https://clean-sienna-hyena-18.hostingersite.com/podcast/">Ver todos os episódios</a></p>
     <p class="pending" style="margin-top:1.5rem">Podcast: informe o link do episódio e dos 3 cortes em CONFIG.podcast (final do arquivo). Na prévia e no arquivo local o player não toca: os cards abrem o YouTube em outra aba.</p>
@@ -732,14 +721,9 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
       <div>
         <p class="eyebrow">Contato</p>
         <h2 class="h2" id="h-form" tabindex="-1">Qual é o próximo passo da sua empresa?</h2>
-        <p class="lead">Conte quem você é e o que pretende alcançar. Seu contato é registrado com a origem “Página Afro Negrócio”.</p>
+        <p class="lead">Conte quem você é e o que pretende alcançar. A equipe da Câmara responde pelo e-mail informado.</p>
       </div>
-      <div class="addr" aria-label="E-mail da agência">
-        <span>E-mail:</span>
-        <code id="agency-email">agencia@angolabrasil.org.br</code>
-        <button class="copy" type="button" id="copy-email" data-no-i18n>Copiar</button>
-      </div>
-      <p class="pending">Confirmar e-mail da agência</p>
+      
       <a class="btn btn-ghost" data-whatsapp data-track="whatsapp" data-origem="contato-whatsapp" href="#" target="_blank" rel="noopener" hidden>Falar no WhatsApp</a>
     </div>
 
@@ -821,6 +805,28 @@ body[data-review="on"] .slot { display: grid; align-content: center; min-height:
 /* Traduções. Chave = texto em português como escrito no HTML. */
 window.AN_DICT = {
  "en": {
+  "Soluções": "Solutions",
+  "Selecione a seguir o que sua empresa necessita agora. Levamos você à solução correspondente e já indicamos esse interesse no formulário.": "Select below what your business needs right now. We take you to the matching solution and already mark that interest in the form.",
+  "Quero atrair clientes": "I want to attract customers",
+  "Quero fortalecer minha marca": "I want to strengthen my brand",
+  "Quero organizar minha estrutura digital": "I want to organize my digital structure",
+  "Quero explorar novos mercados": "I want to explore new markets",
+  "Cada frente pode ser contratada de forma isolada ou combinada. O escopo é definido depois de entender a sua empresa.": "Each area can be hired on its own or combined. The scope is defined after we understand your business.",
+  "A Afro Negrócio faz parte da Câmara": "Afro Negrócio is part of the Chamber",
+  "A Afro Negrócio é a agência da Câmara de Comércio Angola Brasil e responde pelo serviço de Marketing, Comunicação e Expansão Digital.": "Afro Negrócio is the agency of the Angola Brazil Chamber of Commerce and runs its Marketing, Communication and Digital Expansion service.",
+  "Marketing, comunicação e estrutura digital para empresas que atuam entre Angola e Brasil.": "Marketing, communication and digital structure for companies working between Angola and Brazil.",
+  "Proposta, escopo e condições definidos para cada empresa.": "Proposal, scope and terms defined for each company.",
+  "Projetos de relacionamento empresarial com a rede da Câmara.": "Business relationship projects with the Chamber's network.",
+  "Com toda a estrutura da Câmara": "With the Chamber's full structure",
+  "Quem trabalha com a Afro Negrócio conta também com os demais serviços da Câmara.": "Those who work with Afro Negrócio also have access to the Chamber's other services.",
+  "Internacionalização de empresas e missões empresariais.": "Business internationalization and trade missions.",
+  "Networking, conexões estratégicas e eventos.": "Networking, strategic connections and events.",
+  "Consultoria e inteligência de mercado.": "Consulting and market intelligence.",
+  "Todos os serviços da Câmara <span aria-hidden=\"true\">→</span>": "All of the Chamber's services <span aria-hidden=\"true\">→</span>",
+  "Conte quem você é e o que pretende alcançar. A equipe da Câmara responde pelo e-mail informado.": "Tell us who you are and what you want to achieve. The Chamber's team will reply to the e-mail you provide.",
+  "<span class=\"pc-more-k\">Vídeo institucional</span><span class=\"pc-more-t\">Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span></span>": "<span class=\"pc-more-k\">Institutional video</span><span class=\"pc-more-t\">Watch the Chamber's video <span aria-hidden=\"true\">→</span></span>",
+  "Vídeo institucional": "Institutional video",
+  "Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span>": "Watch the Chamber's video <span aria-hidden=\"true\">→</span>",
   "Ir para o conteúdo": "Skip to content",
   "<a href=\"#solucoes\">Soluções</a>": "<a href=\"#solucoes\">Solutions</a>",
   "<a href=\"#metodo\">Método</a>": "<a href=\"#metodo\">Method</a>",
@@ -1082,6 +1088,28 @@ window.AN_DICT = {
   "Categorias de notícias": "News categories"
  },
  "es": {
+  "Soluções": "Soluciones",
+  "Selecione a seguir o que sua empresa necessita agora. Levamos você à solução correspondente e já indicamos esse interesse no formulário.": "Seleccione a continuación lo que su empresa necesita ahora. Lo llevamos a la solución correspondiente y ya indicamos ese interés en el formulario.",
+  "Quero atrair clientes": "Quiero atraer clientes",
+  "Quero fortalecer minha marca": "Quiero fortalecer mi marca",
+  "Quero organizar minha estrutura digital": "Quiero organizar mi estructura digital",
+  "Quero explorar novos mercados": "Quiero explorar nuevos mercados",
+  "Cada frente pode ser contratada de forma isolada ou combinada. O escopo é definido depois de entender a sua empresa.": "Cada frente puede contratarse de forma aislada o combinada. El alcance se define después de entender su empresa.",
+  "A Afro Negrócio faz parte da Câmara": "Afro Negrócio forma parte de la Cámara",
+  "A Afro Negrócio é a agência da Câmara de Comércio Angola Brasil e responde pelo serviço de Marketing, Comunicação e Expansão Digital.": "Afro Negrócio es la agencia de la Cámara de Comercio Angola Brasil y se encarga del servicio de Marketing, Comunicación y Expansión Digital.",
+  "Marketing, comunicação e estrutura digital para empresas que atuam entre Angola e Brasil.": "Marketing, comunicación y estructura digital para empresas que actúan entre Angola y Brasil.",
+  "Proposta, escopo e condições definidos para cada empresa.": "Propuesta, alcance y condiciones definidos para cada empresa.",
+  "Projetos de relacionamento empresarial com a rede da Câmara.": "Proyectos de relación empresarial con la red de la Cámara.",
+  "Com toda a estrutura da Câmara": "Con toda la estructura de la Cámara",
+  "Quem trabalha com a Afro Negrócio conta também com os demais serviços da Câmara.": "Quien trabaja con Afro Negrócio cuenta también con los demás servicios de la Cámara.",
+  "Internacionalização de empresas e missões empresariais.": "Internacionalización de empresas y misiones empresariales.",
+  "Networking, conexões estratégicas e eventos.": "Networking, conexiones estratégicas y eventos.",
+  "Consultoria e inteligência de mercado.": "Consultoría e inteligencia de mercado.",
+  "Todos os serviços da Câmara <span aria-hidden=\"true\">→</span>": "Todos los servicios de la Cámara <span aria-hidden=\"true\">→</span>",
+  "Conte quem você é e o que pretende alcançar. A equipe da Câmara responde pelo e-mail informado.": "Cuéntenos quién es y qué pretende lograr. El equipo de la Cámara responde al correo electrónico informado.",
+  "<span class=\"pc-more-k\">Vídeo institucional</span><span class=\"pc-more-t\">Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span></span>": "<span class=\"pc-more-k\">Video institucional</span><span class=\"pc-more-t\">Ver el video de la Cámara <span aria-hidden=\"true\">→</span></span>",
+  "Vídeo institucional": "Video institucional",
+  "Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span>": "Ver el video de la Cámara <span aria-hidden=\"true\">→</span>",
   "Ir para o conteúdo": "Saltar al contenido",
   "<a href=\"#solucoes\">Soluções</a>": "<a href=\"#solucoes\">Soluciones</a>",
   "<a href=\"#metodo\">Método</a>": "<a href=\"#metodo\">Método</a>",
@@ -1343,6 +1371,28 @@ window.AN_DICT = {
   "Categorias de notícias": "Categorías de noticias"
  },
  "fr": {
+  "Soluções": "Solutions",
+  "Selecione a seguir o que sua empresa necessita agora. Levamos você à solução correspondente e já indicamos esse interesse no formulário.": "Sélectionnez ci-dessous ce dont votre entreprise a besoin maintenant. Nous vous menons à la solution correspondante et indiquons déjà cet intérêt dans le formulaire.",
+  "Quero atrair clientes": "Je veux attirer des clients",
+  "Quero fortalecer minha marca": "Je veux renforcer ma marque",
+  "Quero organizar minha estrutura digital": "Je veux organiser ma structure numérique",
+  "Quero explorar novos mercados": "Je veux explorer de nouveaux marchés",
+  "Cada frente pode ser contratada de forma isolada ou combinada. O escopo é definido depois de entender a sua empresa.": "Chaque axe peut être contracté seul ou combiné. Le périmètre est défini après avoir compris votre entreprise.",
+  "A Afro Negrócio faz parte da Câmara": "Afro Negrócio fait partie de la Chambre",
+  "A Afro Negrócio é a agência da Câmara de Comércio Angola Brasil e responde pelo serviço de Marketing, Comunicação e Expansão Digital.": "Afro Negrócio est l'agence de la Chambre de Commerce Angola Brésil et assure le service Marketing, Communication et Expansion Numérique.",
+  "Marketing, comunicação e estrutura digital para empresas que atuam entre Angola e Brasil.": "Marketing, communication et structure numérique pour les entreprises actives entre l'Angola et le Brésil.",
+  "Proposta, escopo e condições definidos para cada empresa.": "Proposition, périmètre et conditions définis pour chaque entreprise.",
+  "Projetos de relacionamento empresarial com a rede da Câmara.": "Projets de relations d'affaires avec le réseau de la Chambre.",
+  "Com toda a estrutura da Câmara": "Avec toute la structure de la Chambre",
+  "Quem trabalha com a Afro Negrócio conta também com os demais serviços da Câmara.": "Ceux qui travaillent avec Afro Negrócio bénéficient aussi des autres services de la Chambre.",
+  "Internacionalização de empresas e missões empresariais.": "Internationalisation des entreprises et missions d'affaires.",
+  "Networking, conexões estratégicas e eventos.": "Networking, connexions stratégiques et événements.",
+  "Consultoria e inteligência de mercado.": "Conseil et intelligence de marché.",
+  "Todos os serviços da Câmara <span aria-hidden=\"true\">→</span>": "Tous les services de la Chambre <span aria-hidden=\"true\">→</span>",
+  "Conte quem você é e o que pretende alcançar. A equipe da Câmara responde pelo e-mail informado.": "Dites-nous qui vous êtes et ce que vous voulez atteindre. L'équipe de la Chambre répond à l'adresse e-mail indiquée.",
+  "<span class=\"pc-more-k\">Vídeo institucional</span><span class=\"pc-more-t\">Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span></span>": "<span class=\"pc-more-k\">Vidéo institutionnelle</span><span class=\"pc-more-t\">Regarder la vidéo de la Chambre <span aria-hidden=\"true\">→</span></span>",
+  "Vídeo institucional": "Vidéo institutionnelle",
+  "Assistir ao vídeo da Câmara <span aria-hidden=\"true\">→</span>": "Regarder la vidéo de la Chambre <span aria-hidden=\"true\">→</span>",
   "Ir para o conteúdo": "Aller au contenu",
   "<a href=\"#solucoes\">Soluções</a>": "<a href=\"#solucoes\">Solutions</a>",
   "<a href=\"#metodo\">Método</a>": "<a href=\"#metodo\">Méthode</a>",
@@ -2394,9 +2444,10 @@ window.AN_UI = {
     clearError(interest);
   }
 
-  function goTo(id) {
+  function goTo(id, fromHistory) {
     var el = document.getElementById(id);
     if (!el) return;
+    if (!fromHistory && location.hash !== "#" + id) { try { history.pushState({ an: id }, "", "#" + id); } catch (x) {} }
     el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
     if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
     window.setTimeout(function () { el.focus({ preventScroll: true }); }, reduceMotion ? 0 : 450);
@@ -2405,6 +2456,11 @@ window.AN_UI = {
   }
 
   document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (a && !a.hasAttribute("data-goto") && a.getAttribute("href").length > 1) {
+      var id = decodeURIComponent(a.getAttribute("href").slice(1));
+      if (document.getElementById(id)) { e.preventDefault(); goTo(id); }
+    }
     var t = e.target.closest("[data-interest], [data-goto], [data-track]");
     if (!t) return;
     var origem = t.getAttribute("data-origem") || "";
@@ -2416,6 +2472,11 @@ window.AN_UI = {
     if (tr === "whatsapp") track("clique_whatsapp", { origem_cta: origem });
     var target = t.getAttribute("data-goto");
     if (target) { e.preventDefault(); goTo(target); }
+  });
+
+  window.addEventListener("popstate", function () {
+    var id = decodeURIComponent((location.hash || "").slice(1));
+    if (id && document.getElementById(id)) goTo(id, true); else window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
   });
 
   /* WhatsApp: só aparece com número confirmado */
@@ -2430,7 +2491,7 @@ window.AN_UI = {
 
   /* copiar e-mail */
   var copyBtn = document.getElementById("copy-email");
-  copyBtn.addEventListener("click", function () {
+  if (copyBtn) copyBtn.addEventListener("click", function () {
     var text = document.getElementById("agency-email").textContent;
     function done(ok) {
       copyBtn.textContent = L(ok ? "copied" : "copy_manual");
@@ -2548,7 +2609,7 @@ window.AN_UI = {
     var y = document.getElementById("ano");
     if (y) y.textContent = new Date().getFullYear();
     menuBtn.setAttribute("aria-label", L(nav.getAttribute("data-open") === "true" ? "menu_close" : "menu_open"));
-    copyBtn.textContent = L("copy");
+    if (copyBtn) copyBtn.textContent = L("copy");
     chip.textContent = interest.value ? L("chip", { label: L("i_" + interest.value) }) : "";
     setWa();
     if (form.querySelector('[aria-invalid="true"]')) validate();
