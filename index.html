@@ -105,6 +105,29 @@ button{font:inherit;cursor:pointer}
 .menu a:hover,.menu a.on{color:var(--white)}
 .menu a:hover::after,.menu a.on::after{transform:scaleX(1)}
 .nav .btn{padding:11px 22px}
+html{overflow-x:clip}
+.crew-stage{overflow-x:clip}
+/* Menu Ecossistema */
+.menu a,.menu-sub{white-space:nowrap}
+.menu{gap:clamp(12px,1.6vw,28px)!important}
+@media (max-width:1240px){.drawer{overflow-y:auto;justify-content:flex-start!important}.drawer>*{flex-shrink:0}.drawer .btn{align-self:flex-start;padding:14px 26px}}
+.has-sub{position:relative}
+.menu-sub{background:none;border:0;padding:6px 0;font:inherit;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,232,.88);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.menu-sub span{font-size:9px;transition:transform .3s}
+.has-sub:hover .menu-sub,.has-sub.open .menu-sub{color:var(--white)}
+.has-sub.open .menu-sub span,.has-sub:hover .menu-sub span{transform:rotate(180deg)}
+.menu .sub{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,8px);min-width:280px;list-style:none;margin:0;padding:10px;display:grid;gap:2px;background:rgba(8,20,69,.97);border:1px solid rgba(245,183,59,.35);border-radius:10px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s;z-index:5}
+.menu .sub::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.menu .sub a{display:block;padding:10px 14px;border-radius:6px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ivory)}
+.menu .sub a::after{display:none}
+.menu .sub a:hover,.menu .sub a:focus-visible{background:rgba(245,183,59,.12)}
+.menu .sub b{display:block;font-weight:600}
+.menu .sub small{display:block;font-size:12px;color:rgba(245,241,232,.65);margin-top:2px}
+.d-eco{display:grid;gap:4px;margin:10px 0 18px;padding-top:14px;border-top:1px solid rgba(245,183,59,.3)}
+.d-eco span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.d-eco a{padding:8px 0;font-size:17px;color:var(--ivory)}
+
 .burger{display:none;width:44px;height:44px;border:1px solid rgba(245,183,59,.5);background:transparent;border-radius:3px;position:relative}
 .burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--gold2);transition:transform .4s var(--ease),opacity .3s}
 .burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
@@ -112,7 +135,7 @@ button{font:inherit;cursor:pointer}
 .nav.open .burger span:nth-child(2){opacity:0}
 .nav.open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .drawer{display:none}
-@media (max-width:1100px){
+@media (max-width:1240px){
   .menu,.nav-cta{display:none}
   .burger{display:block}
   .logo-badge{width:62px;height:62px;padding:5px}.logo-sub{font-size:9.5px}
@@ -772,6 +795,7 @@ footer{background:#050D33;padding:56px var(--gutter) 34px;color:rgba(245,241,232
         <li><a href="#oportunidades" data-spy="oportunidades">Oportunidades</a></li>
         <li><a href="#eventos" data-spy="eventos">Eventos</a></li>
         <li><a href="#parceiros" data-spy="parceiros">Parceiros</a></li>
+        <li class="has-sub"><button type="button" class="menu-sub" aria-expanded="false" aria-controls="sub-eco">Ecossistema <span aria-hidden="true">▾</span></button><ul class="sub" id="sub-eco"><li><a href="https://clean-sienna-hyena-18.hostingersite.com/afro-negrocio/"><b>Afro Negrócio</b><small>Agência de marketing e negócios</small></a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/podcast/"><b>Roda de Negrócios</b><small>Podcast Brasil × Angola</small></a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/estrutura-360/"><b>ESTRUTURA 360°</b><small>Diagnóstico empresarial</small></a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/academia/"><b>Academia</b><small>Cursos e mentorias</small></a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/caminter/"><b>CAMINTER</b><small>Arbitragem e mediação</small></a></li><li><a href="https://clean-sienna-hyena-18.hostingersite.com/conteudos/"><b>Conteúdos e guias</b><small>Radar, guias e masterclass</small></a></li></ul></li>
         <li><a href="#form" data-spy="contato">Contato</a></li>
       </ul>
     </nav>
@@ -786,6 +810,7 @@ footer{background:#050D33;padding:56px var(--gutter) 34px;color:rgba(245,241,232
     <a class="d-link" href="#eventos">Eventos <small>05</small></a>
     <a class="d-link" href="#parceiros">Parceiros <small>06</small></a>
     <a class="d-link" href="#form">Contato <small>07</small></a>
+    <div class="d-eco"><span>Ecossistema</span><a href="https://clean-sienna-hyena-18.hostingersite.com/afro-negrocio/">Afro Negrócio</a><a href="https://clean-sienna-hyena-18.hostingersite.com/podcast/">Roda de Negrócios</a><a href="https://clean-sienna-hyena-18.hostingersite.com/estrutura-360/">ESTRUTURA 360°</a><a href="https://clean-sienna-hyena-18.hostingersite.com/academia/">Academia</a><a href="https://clean-sienna-hyena-18.hostingersite.com/caminter/">CAMINTER</a><a href="https://clean-sienna-hyena-18.hostingersite.com/conteudos/">Conteúdos e guias</a></div>
     <a href="#form" class="btn btn-solid" data-interest="associacao">Associe-se <span class="arr">→</span></a>
   </div>
 </header>
@@ -2456,6 +2481,13 @@ const CONFIG = {
     note.textContent=r==="ok"?"Inscrição recebida. Obrigado!":r==="mail"?"Abrindo seu aplicativo de e-mail…":"Canal de envio em configuração.";
     if(r==="ok") nf.reset();
   });
+
+  /* menu Ecossistema: abre no clique/teclado também */
+  $$(".has-sub").forEach(li=>{ const b=li.querySelector(".menu-sub");
+    b.addEventListener("click",e=>{ e.stopPropagation(); const o=li.classList.toggle("open"); b.setAttribute("aria-expanded",o); });
+    li.addEventListener("keydown",e=>{ if(e.key==="Escape"){ li.classList.remove("open"); b.setAttribute("aria-expanded","false"); b.focus(); } });
+  });
+  document.addEventListener("click",()=>$$(".has-sub.open").forEach(li=>{ li.classList.remove("open"); li.querySelector(".menu-sub").setAttribute("aria-expanded","false"); }));
 
   /* ---------- Formulário de contato ---------- */
   $("#form").addEventListener("submit",async e=>{
