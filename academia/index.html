@@ -285,6 +285,57 @@ section[id]{scroll-margin-top:108px}
 </div></nav>
 <style id="ccab-identidade">h1,h2,h3,h4{letter-spacing:-.005em}:root{--bg:#081445;--bg-2:#0B1B58;--panel:#0F2366;--panel-2:#10266F;--gold-2:#FAC555;--muted:#B4BEDA}h1,h2,h3{font-weight:600}</style>
 <style id="ccab-a11y">.txt .tag{background-image:linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32))}button[data-open] .body .tag{background-image:linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32))}</style>
+<style id="acad-pro">
+/* Academia: tom institucional (sem ilustrações, paleta sóbria) */
+.hero{background:radial-gradient(ellipse 55% 80% at 85% 10%,rgba(245,183,59,.10),transparent 60%),linear-gradient(180deg,#081445 0%,#0B1B58 100%)!important;border-bottom:1px solid rgba(245,183,59,.25)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.035) 119px 120px)}
+.hero-art,#skyline,.swoosh{display:none!important}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero h1{font-weight:500!important;letter-spacing:-.01em!important;font-size:clamp(38px,5vw,66px)!important;margin:18px 0 18px!important}
+.hero h1 em{font-style:italic!important}
+.hero p{color:rgba(245,241,232,.78)!important;max-width:44ch!important}
+.eyebrow{font-family:var(--font-body)!important;font-weight:600!important;font-size:11px!important;letter-spacing:.28em!important;max-width:none!important}
+.hero-panel{border:1px solid rgba(245,183,59,.35);background:rgba(8,20,69,.6);padding:28px 30px;border-radius:4px}
+.hp-k{display:block;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.hero-panel ol{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
+.hero-panel li{break-inside:avoid;display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#E6EAF5}
+.hero-panel li span{font-size:11px;color:var(--gold);padding-top:2px;font-variant-numeric:tabular-nums}
+.hero-panel dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 0;padding-top:18px;border-top:1px solid rgba(245,183,59,.3)}
+.hero-panel dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#97A3C6}
+.hero-panel dd{margin:4px 0 0;font-family:var(--font-display);font-size:18px;font-weight:500;line-height:1.2}
+@media (max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-panel ol{columns:1}}
+@media (max-width:480px){.hero-panel dl{grid-template-columns:1fr}}
+.btn{border-radius:3px!important;font:600 12.5px/1 var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase}
+.btn.gold{background:var(--gold)!important;box-shadow:none!important}
+.hero .btn{padding:16px 28px!important;font-size:13px!important}
+.nav button{font:500 12px/1 var(--font-body)!important;letter-spacing:.12em;text-transform:uppercase;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;padding:10px 12px!important}
+.nav button[aria-current="true"]{background:none!important;border-bottom-color:var(--gold)!important}
+.sec-head h2{font-weight:500!important;font-size:clamp(26px,2.8vw,34px)!important;border-left:0!important;padding-left:0!important}
+.sec-head h2::before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px}
+.sec-head .more{font:600 12px var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)!important}
+.card{border-radius:6px!important;background:#0B1B58!important;border-color:rgba(255,255,255,.1)!important}
+.card:hover{transform:translateY(-2px)!important;box-shadow:0 14px 30px -18px rgba(0,0,0,.8)!important}
+.card .art,.tile,.event .art,.sheet-hero{background:linear-gradient(160deg,#10266F,#081445)!important;border-bottom:1px solid rgba(245,183,59,.35)}
+.card .art{height:92px!important;justify-content:space-between;align-items:flex-end}
+.card .art b{font:500 26px/1 var(--font-display)!important;color:var(--gold-2)}
+.card .art i{font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#97A3C6;align-self:flex-start}
+.card--feat .art b{font-size:22px!important}
+.card .ttl{font-weight:600!important;font-size:18px!important}
+.card .go{background:transparent!important;border:1px solid var(--gold);color:var(--gold)!important}
+.tag{background:none!important;background-image:none!important;border:1px solid rgba(245,183,59,.55);color:var(--gold-2)!important;font:600 10.5px/1 var(--font-body)!important;letter-spacing:.12em;text-transform:uppercase;border-radius:2px!important;padding:5px 8px!important}
+.tile{border-radius:6px!important;border-color:rgba(245,183,59,.25)!important}
+.tile b{font-weight:500!important;color:var(--gold-2)}
+.event{border-radius:6px!important;border-color:rgba(245,183,59,.35)!important}
+.event .art{font-weight:500!important;color:var(--gold-2);border-bottom:0;border-right:1px solid rgba(245,183,59,.35)}
+.event h3,.faq summary{font-weight:600!important}
+.chip{font:500 12px/1 var(--font-body)!important;letter-spacing:.06em;border-radius:3px!important}
+.perks,.stat,.faq details,.sheet{border-radius:6px!important}
+.stat b{font-weight:500!important}
+.sheet-hero--plain{height:70px;padding:0!important}
+.globe{background:linear-gradient(180deg,var(--bg),#081445)!important;border-top:1px solid rgba(245,183,59,.2);padding-top:48px!important}
+.globe::after{display:none}
+.together span{font-family:var(--font-body)!important;font-weight:600!important;font-size:11px!important}
+</style>
 
 <script>(function(){try{var a=document.querySelector(".ccab-bar a[aria-current=page]");if(a&&a.scrollIntoView)a.parentNode.parentNode.scrollLeft=a.offsetLeft-60;}catch(e){}})();</script>
 <header class="top">
@@ -333,6 +384,7 @@ section[id]{scroll-margin-top:108px}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
         </button>
       </div>
+      <aside class="hero-panel" aria-label="Trilhas da Academia"><span class="hp-k">Trilhas de formação</span><ol><li><span>01</span>Inteligência Artificial</li><li><span>02</span>Segurança Digital</li><li><span>03</span>Marketing Digital e Vendas</li><li><span>04</span>Empreendedorismo e Inovação</li><li><span>05</span>Impacto Social e Comunidade</li><li><span>06</span>Social Media</li><li><span>07</span>Sites e Bio Link</li><li><span>08</span>Prospecção e Comunicação</li><li><span>09</span>Tecnologia</li><li><span>10</span>Eventos e Feiras</li></ol><dl><div><dt>Formato</dt><dd>Mentoria online</dd></div><div><dt>Duração</dt><dd>1h a 1h30 por encontro</dd></div><div><dt>Turmas</dt><dd>Individuais ou em grupo</dd></div></dl></aside>
     </div>
   </section>
 
@@ -425,12 +477,12 @@ section[id]{scroll-margin-top:108px}
 
 <script>
 (function(){
-  var IMGS = {"hero": "/assets/09c0e9df65ac6b.jpg", "c1": "/assets/f7c9faeffc1fba.jpg", "c2": "/assets/e0c2009f91ed6f.jpg", "c3": "/assets/f1e539b80cfb64.jpg", "c4": "/assets/1fa0478b1f55bd.jpg", "c5": "/assets/25262b23d1fe36.jpg", "globe": "/assets/eec104adebe42b.jpg", "ccab": "/assets/46325cc1311826.png", "ccabfull": "/assets/46325cc1311826.png", "afro": "/assets/1fa8038cfbbc79.png"};
+  var IMGS = {"hero": "", "c1": "", "c2": "", "c3": "", "c4": "", "c5": "", "globe": "", "ccab": "/assets/46325cc1311826.png", "ccabfull": "/assets/46325cc1311826.png", "afro": "/assets/1fa8038cfbbc79.png"};
   var EMAIL = "agencia@angolabrasil.org.br";
 
   /* imagens extraídas do mockup */
-  document.documentElement.style.setProperty("--hero-art","url("+IMGS.hero+")");
-  document.documentElement.style.setProperty("--globe-img","url("+IMGS.globe+")");
+  
+  
   Array.prototype.forEach.call(document.querySelectorAll("[data-img]"),function(el){ el.src = IMGS[el.getAttribute("data-img")]; });
 
   /* skyline decorativo do banner */
@@ -526,9 +578,9 @@ section[id]{scroll-margin-top:108px}
   var ICON_BARS  = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5b73b" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 19v-4M12 19V9M18 19V5"/></svg>';
   var ICON_ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 
-  function featuredCard(c){
-    return '<button type="button" class="card" data-open="'+c.id+'">'+
-      '<img class="pic" src="'+IMGS[c.img]+'" alt="">'+
+  function featuredCard(c,i){
+    return '<button type="button" class="card card--feat" data-open="'+c.id+'">'+
+      '<span class="art"><i>Curso '+('0'+((i||0)+1)).slice(-2)+'</i><b>'+esc(c.hours)+'</b></span>'+
       '<span class="body"><span class="tag" style="--tg:'+c.color+'">'+esc(c.tag)+'</span>'+
       '<span class="ttl">'+esc(c.title)+'</span>'+
       '<span class="meta"><span>'+ICON_CLOCK+esc(c.hours)+'</span><span>'+ICON_BARS+esc(c.level)+'</span><span class="go">'+ICON_ARROW+'</span></span></span>'+
@@ -609,7 +661,7 @@ section[id]{scroll-margin-top:108px}
     var f = FEATURED.filter(function(x){return x.id===id;})[0];
     if(f){
       showSheet(CLOSE+
-        '<div class="sheet-hero photo"><img src="'+IMGS[f.img]+'" alt=""></div>'+
+        '<div class="sheet-hero sheet-hero--plain"></div>'+
         '<div class="sheet-title"><span class="kicker">'+esc(f.tag)+'</span><h2 id="sheet-title">'+esc(f.title)+'</h2></div>'+
         '<div class="sheet-body"><p>'+esc(f.summary)+'</p>'+
         '<ul class="facts"><li><small>Formato</small>Mentoria online por videochamada</li><li><small>Carga horária</small>'+esc(f.hours)+'</li><li><small>Nível</small>'+esc(f.level)+'</li><li><small>Horários</small>Adaptados ao fuso de Angola e do Brasil</li></ul>'+
