@@ -285,41 +285,82 @@ section[id]{scroll-margin-top:108px}
 </div></nav>
 <style id="ccab-identidade">h1,h2,h3,h4{letter-spacing:-.005em}:root{--bg:#081445;--bg-2:#0B1B58;--panel:#0F2366;--panel-2:#10266F;--gold-2:#FAC555;--muted:#B4BEDA}h1,h2,h3{font-weight:600}</style>
 <style id="ccab-a11y">.txt .tag{background-image:linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32))}button[data-open] .body .tag{background-image:linear-gradient(rgba(0,0,0,.32),rgba(0,0,0,.32))}</style>
-<style id="acad-pro">
-/* Academia: tom institucional (sem ilustrações, paleta sóbria) */
-.hero{background:radial-gradient(ellipse 55% 80% at 85% 10%,rgba(245,183,59,.10),transparent 60%),linear-gradient(180deg,#081445 0%,#0B1B58 100%)!important;border-bottom:1px solid rgba(245,183,59,.25)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.035) 119px 120px)}
-.hero-art,#skyline,.swoosh{display:none!important}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
-.hero h1{font-weight:500!important;letter-spacing:-.01em!important;font-size:clamp(38px,5vw,66px)!important;margin:18px 0 18px!important}
-.hero h1 em{font-style:italic!important}
-.hero p{color:rgba(245,241,232,.78)!important;max-width:44ch!important}
-.eyebrow{font-family:var(--font-body)!important;font-weight:600!important;font-size:11px!important;letter-spacing:.28em!important;max-width:none!important}
-.hero-panel{border:1px solid rgba(245,183,59,.35);background:rgba(8,20,69,.6);padding:28px 30px;border-radius:4px}
-.hp-k{display:block;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.hero-panel ol{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
-.hero-panel li{break-inside:avoid;display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;color:#E6EAF5}
-.hero-panel li span{font-size:11px;color:var(--gold);padding-top:2px;font-variant-numeric:tabular-nums}
-.hero-panel dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 0;padding-top:18px;border-top:1px solid rgba(245,183,59,.3)}
-.hero-panel dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#97A3C6}
-.hero-panel dd{margin:4px 0 0;font-family:var(--font-display);font-size:18px;font-weight:500;line-height:1.2}
-@media (max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-panel ol{columns:1}}
-@media (max-width:480px){.hero-panel dl{grid-template-columns:1fr}}
-.btn{border-radius:3px!important;font:600 12.5px/1 var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase}
-.btn.gold{background:var(--gold)!important;box-shadow:none!important}
-.hero .btn{padding:16px 28px!important;font-size:13px!important}
-.nav button{font:500 12px/1 var(--font-body)!important;letter-spacing:.12em;text-transform:uppercase;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;padding:10px 12px!important}
-.nav button[aria-current="true"]{background:none!important;border-bottom-color:var(--gold)!important}
-.sec-head h2{font-weight:500!important;font-size:clamp(26px,2.8vw,34px)!important;border-left:0!important;padding-left:0!important}
-.sec-head h2::before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px}
-.sec-head .more{font:600 12px var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)!important}
-.event h3,.faq summary{font-weight:600!important}
-.chip{font:500 12px/1 var(--font-body)!important;letter-spacing:.06em;border-radius:3px!important}
+<style id="acad-v2">
+/* Academia v2: visual da prévia (azul profundo, cartões sóbrios, trilhas com filete colorido) */
+:root{--bg:#0B1330;--bg-2:#0E1838;--panel:#121C40;--panel-2:#16224B;--line:rgba(255,255,255,.09)}
+body{background:var(--bg)!important}
+.top{background:rgba(11,19,48,.96)!important;backdrop-filter:blur(10px)}
+.nav button{font:500 14.5px/1 var(--font-body)!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;padding:10px 12px!important;color:#D7DDEE!important;background:none!important}
+.nav button:hover{color:#fff!important}
+.nav button[aria-current="true"]{color:#fff!important;border-bottom-color:#D8B25A!important}
+.btn{border-radius:4px!important;font:600 14px/1 var(--font-body)!important}
+.btn.gold{background:linear-gradient(180deg,#D8B25A,#C9A24A)!important;color:#141006!important;box-shadow:none!important}
+.btn.line{border-color:rgba(255,255,255,.25)!important;color:#fff!important}
+.btn.line:hover{border-color:#D8B25A!important;background:transparent!important}
+.hero2{background:radial-gradient(ellipse 60% 90% at 75% 40%,#16224B 0%,transparent 70%),var(--bg)!important;border-bottom:1px solid var(--line)}
+.hero2 .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:clamp(56px,7vw,92px)!important}
+.hero2 .eyebrow{font:600 11.5px/1.4 var(--font-body)!important;letter-spacing:.2em;color:#D8B25A;max-width:none}
+.hero2 h1{font:700 clamp(44px,5.6vw,76px)/1.02 var(--font-display)!important;letter-spacing:-.01em;margin:14px 0 18px!important}
+.hero2 h1 em{font-style:italic;display:inline!important;background:none!important;color:#D8B25A!important;-webkit-text-fill-color:#D8B25A}
+.hero2 p{font-size:18px!important;color:#C9D2EC!important;max-width:36ch!important;margin:0 0 28px!important}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-cta .btn{padding:15px 26px!important}
+.hero-stats{display:flex;margin:38px 0 0;padding-top:24px;border-top:1px solid var(--line);max-width:520px}
+.hero-stats div{padding:0 26px;border-left:1px solid var(--line)}
+.hero-stats div:first-child{padding-left:0;border-left:0}
+.hero-stats dt{font:700 28px/1 var(--font-display)}
+.hero-stats dd{margin:6px 0 0;font-size:12.5px;color:#97A3C6}
+.corridor{width:100%;max-width:480px;justify-self:center}
+.cor-flow{animation:corflow 6s linear infinite}
+@keyframes corflow{to{stroke-dashoffset:-80}}
+@media (prefers-reduced-motion:reduce){.cor-flow{animation:none}}
+@media (max-width:860px){.hero2 .wrap{grid-template-columns:minmax(0,1fr)}.corridor{max-width:360px}.hero-stats div{padding:0 14px}}
+.sec-head h2{font:700 clamp(26px,2.8vw,32px)/1.15 var(--font-display)!important;border:0!important;padding:0 0 12px!important;position:relative}
+.sec-head h2::after{content:"";position:absolute;left:0;bottom:0;width:36px;height:2px;background:#D8B25A}
+.sec-head .more{font:500 14px var(--font-body)!important;color:#D8B25A!important}
+.block{padding-top:64px!important}
+.cards{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))!important}
+#catalog{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media (max-width:1100px){#catalog{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (max-width:760px){#catalog{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:480px){#catalog{grid-template-columns:minmax(0,1fr)!important}}
+.card{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:6px!important}
+.card:hover{transform:translateY(-3px)!important;border-color:rgba(216,178,90,.55)!important;box-shadow:0 18px 34px -20px rgba(0,0,0,.8)!important}
+.card .pic{height:104px!important}
+.card .art{height:104px!important;padding:12px 16px!important;border-bottom:2px solid hsl(var(--h) 45% 58%);
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 1px,transparent 1px 16px),linear-gradient(135deg,hsl(var(--h) 28% 24%),hsl(var(--h) 24% 15%))!important}
+.card .art b{font:700 28px/1 var(--font-display)!important;color:rgba(255,255,255,.55)}
+.card .body{padding:14px 16px 16px!important;gap:8px!important}
+.card .tag,.tag{background:none!important;background-image:none!important;padding:0!important;border:0!important;border-radius:0!important;font:600 10.5px/1.4 var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase;color:hsl(var(--h,220) 55% 74%)!important}
+.card .ttl{font:600 15.5px/1.35 var(--font-body)!important;min-height:4.05em!important}
+.card .meta{font-size:12.5px!important;color:#97A3C6!important}
+.card .meta svg{width:14px;height:14px}
+.card .go{background:none!important;color:#D8B25A!important;width:auto!important;height:auto!important}
+.search2{display:flex;gap:10px;margin:0 0 16px}
+.search2 input{flex:1;min-width:0;background:var(--panel);color:#fff;border:1px solid var(--line);border-radius:4px;padding:12px 14px;font:inherit}
+.search2 input:focus{outline:none;border-color:#D8B25A}
+.search2 .btn{padding:10px 16px!important;font-size:13px!important}
+.chip{font:500 13px/1 var(--font-body)!important;border-radius:4px!important;background:transparent!important;border-color:var(--line)!important;padding:9px 13px!important}
+.chip[aria-pressed="true"]{background:#D8B25A!important;color:#141006!important;border-color:#D8B25A!important}
+.tiles{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+.tile{background:var(--panel)!important;border:1px solid var(--line)!important;border-left:3px solid hsl(var(--h) 50% 58%)!important;border-radius:6px!important;min-height:100px!important;gap:6px!important;justify-content:flex-start!important;padding:16px 18px!important}
+.tile:hover{border-color:rgba(216,178,90,.5)!important;border-left-color:hsl(var(--h) 50% 58%)!important}
+.tile i{font-style:normal;font:600 10.5px/1 var(--font-body);letter-spacing:.16em;color:hsl(var(--h) 55% 74%)}
+.tile b{font:600 15px/1.3 var(--font-body)!important;color:#fff}
+.tile span{font-size:12.5px!important;color:#97A3C6!important}
+.events{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))!important}
+.event{display:block!important;background:var(--panel)!important;border:1px solid var(--line)!important;border-left:4px solid #D8B25A!important;border-radius:6px!important}
+.event .txt{padding:24px!important}
+.ev-k{font:600 10.5px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#D8B25A}
+.event h3{font:700 19px/1.25 var(--font-display)!important}
+.event .btn{padding:10px 16px!important;font-size:13px!important}
 .perks,.stat,.faq details,.sheet{border-radius:6px!important}
-.stat b{font-weight:500!important}
-.globe{background:linear-gradient(180deg,var(--bg),#081445)!important;border-top:1px solid rgba(245,183,59,.2);padding-top:48px!important}
-.globe::after{display:none}
-.together span{font-family:var(--font-body)!important;font-weight:600!important;font-size:11px!important}
+.perks,.stat,.faq details,.sheet{background:var(--panel)!important}
+.stat b{color:#fff!important}
+.sheet-hero{background:linear-gradient(135deg,hsl(var(--h,220) 28% 24%),hsl(var(--h,220) 24% 15%))!important;border-bottom:2px solid hsl(var(--h,220) 45% 58%)}
+.together span{color:#D8B25A!important}
 </style>
 
 <script>(function(){try{var a=document.querySelector(".ccab-bar a[aria-current=page]");if(a&&a.scrollIntoView)a.parentNode.parentNode.scrollLeft=a.offsetLeft-60;}catch(e){}})();</script>
@@ -355,21 +396,33 @@ section[id]{scroll-margin-top:108px}
 </header>
 
 <main>
-  <section class="hero" id="inicio">
-    <div class="hero-art" aria-hidden="true"></div>
-    <svg id="skyline" viewBox="0 0 640 100" preserveAspectRatio="xMinYMax slice" aria-hidden="true"></svg>
+  <section class="hero hero2" id="inicio">
+    <svg id="skyline" hidden aria-hidden="true"></svg>
     <div class="wrap">
       <div class="copy">
-        <div class="eyebrow">Plataforma de cursos da Câmara de Comércio Angola Brasil</div>
-        <h1>Aprenda. Conecte-se.<em>Expanda seus negócios.</em></h1>
-        <svg class="swoosh" viewBox="0 0 520 18" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#f5b73b" stop-opacity="0"/><stop offset=".35" stop-color="#f5b73b"/><stop offset="1" stop-color="#ffd36e" stop-opacity="0"/></linearGradient></defs><path d="M0 14C120 2 300 2 520 12" fill="none" stroke="url(#sw)" stroke-width="3" stroke-linecap="round"/></svg>
-        <p>Conhecimento, estratégia e conexões para você ir ainda mais longe entre Brasil e Angola.</p>
-        <button type="button" class="btn gold" data-go="cursos">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5 20 12 7 19.5Z"/></svg>Comece agora
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-        </button>
+        <div class="eyebrow">Academia · Câmara de Comércio Angola Brasil</div>
+        <h1>Aprenda.<br>Conecte. <em>Cresça.</em></h1>
+        <p>Mentorias online para empreender entre Angola e Brasil.</p>
+        <div class="hero-cta">
+          <button type="button" class="btn gold" data-go="cursos">Explorar cursos</button>
+          <button type="button" class="btn line" data-auth="signup">Criar conta</button>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>18+</dt><dd>anos de operação</dd></div>
+          <div><dt>200+</dt><dd>empresas na rede</dd></div>
+          <div><dt id="stat-cursos">26</dt><dd>cursos em mentoria online</dd></div>
+        </dl>
       </div>
-      <aside class="hero-panel" aria-label="Trilhas da Academia"><span class="hp-k">Trilhas de formação</span><ol><li><span>01</span>Inteligência Artificial</li><li><span>02</span>Segurança Digital</li><li><span>03</span>Marketing Digital e Vendas</li><li><span>04</span>Empreendedorismo e Inovação</li><li><span>05</span>Impacto Social e Comunidade</li><li><span>06</span>Social Media</li><li><span>07</span>Sites e Bio Link</li><li><span>08</span>Prospecção e Comunicação</li><li><span>09</span>Tecnologia</li><li><span>10</span>Eventos e Feiras</li></ol><dl><div><dt>Formato</dt><dd>Mentoria online</dd></div><div><dt>Duração</dt><dd>1h a 1h30 por encontro</dd></div><div><dt>Turmas</dt><dd>Individuais ou em grupo</dd></div></dl></aside>
+      <svg class="corridor" viewBox="0 0 440 300" role="img" aria-label="Corredor de negócios entre Brasil e Angola">
+        <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,.08)"/></pattern></defs>
+        <ellipse cx="220" cy="160" rx="210" ry="105" fill="url(#dots)" stroke="rgba(255,255,255,.07)"/>
+        <ellipse cx="220" cy="160" rx="150" ry="70" fill="none" stroke="rgba(255,255,255,.05)"/>
+        <path d="M60 215 Q 150 60 230 62 Q 330 70 395 192" fill="none" stroke="rgba(245,183,59,.25)" stroke-width="1.2"/>
+        <path class="cor-flow" d="M60 215 Q 150 60 230 62 Q 330 70 395 192" fill="none" stroke="#F5B73B" stroke-width="1.6" stroke-dasharray="2 6" stroke-linecap="round"/>
+        <g fill="#F5B73B"><circle cx="60" cy="215" r="5"/><circle cx="230" cy="62" r="4"/><circle cx="395" cy="192" r="5"/></g>
+        <g fill="none" stroke="rgba(245,183,59,.5)"><circle cx="60" cy="215" r="12"/><circle cx="230" cy="62" r="9"/><circle cx="395" cy="192" r="12"/></g>
+        <g font-family="Archivo, sans-serif" font-size="11" letter-spacing="3" fill="#C9D2EC"><text x="60" y="250" text-anchor="middle">BRASIL</text><text x="395" y="228" text-anchor="middle">ANGOLA</text><text x="230" y="36" text-anchor="middle" fill="#F5B73B">CORREDOR DE NEGÓCIOS</text></g>
+      </svg>
     </div>
   </section>
 
@@ -377,7 +430,7 @@ section[id]{scroll-margin-top:108px}
     <section class="block" id="destaques" style="padding-top:36px">
       <div class="sec-head">
         <h2>Nossos Cursos</h2>
-        <button type="button" class="more" data-go="cursos">Ver todos os cursos
+        <button type="button" class="more" data-go="cursos">Ver todos os <span id="n-cursos">26</span> cursos
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
       </div>
       <div class="cards" id="featured"></div>
@@ -394,6 +447,7 @@ section[id]{scroll-margin-top:108px}
     <section class="block" id="cursos">
       <div class="sec-head"><h2>Todos os cursos</h2></div>
       <p class="sec-sub">Mentorias online por videochamada, individuais ou em grupo, com 1h a 1h30 por encontro.</p>
+      <form class="search2" id="search2" role="search"><input id="q2" type="search" placeholder="Buscar curso, tema ou trilha" aria-label="Buscar curso, tema ou trilha" autocomplete="off"><button type="submit" class="btn gold">Buscar</button></form>
       <div class="chips" id="chips" role="group" aria-label="Filtrar por trilha"></div>
       <div class="cards" id="catalog" aria-live="polite"></div>
     </section>
@@ -462,10 +516,11 @@ section[id]{scroll-margin-top:108px}
 
 <script>
 (function(){
-  var IMGS = {"hero": "", "c1": "/assets/f7c9faeffc1fba.jpg", "c2": "/assets/e0c2009f91ed6f.jpg", "c3": "/assets/f1e539b80cfb64.jpg", "c4": "/assets/1fa0478b1f55bd.jpg", "c5": "/assets/25262b23d1fe36.jpg", "globe": "", "ccab": "/assets/46325cc1311826.png", "ccabfull": "/assets/46325cc1311826.png", "afro": "/assets/1fa8038cfbbc79.png"};
+  var IMGS = {"hero": "", "c1": "/assets/f7c9faeffc1fba.jpg", "c2": "/assets/e0c2009f91ed6f.jpg", "c3": "/assets/f1e539b80cfb64.jpg", "c4": "/assets/1fa0478b1f55bd.jpg", "c5": "/assets/25262b23d1fe36.jpg", "globe": "/assets/eec104adebe42b.jpg", "ccab": "/assets/46325cc1311826.png", "ccabfull": "/assets/46325cc1311826.png", "afro": "/assets/1fa8038cfbbc79.png"};
   var EMAIL = "agencia@angolabrasil.org.br";
 
   /* imagens extraídas do mockup */
+  document.documentElement.style.setProperty("--globe-img","url("+IMGS.globe+")");
   
   
   Array.prototype.forEach.call(document.querySelectorAll("[data-img]"),function(el){ el.src = IMGS[el.getAttribute("data-img")]; });
@@ -488,6 +543,7 @@ section[id]{scroll-margin-top:108px}
   })();
 
   var TRACKS = [
+    {id:"neg", name:"Negócios Internacionais", short:"NEG", h:220, courses:[]},
     {id:"ia", name:"Inteligência Artificial", short:"IA", h:205, courses:[
       ["IA na Prática: como pequenas e médias empresas podem usar inteligência artificial para vender mais","Demonstração prática de ferramentas e processos para acelerar resultados de marketing, atendimento e criação de conteúdo, com exemplos para os mercados angolano e brasileiro."],
       ["Gaste sua energia no lugar certo com IA: aprendendo tudo sobre Inteligência Artificial","Desmistifica a inteligência artificial para empreendedores e criadores. Mostra como automatizar tarefas, criar conteúdo mais rápido e tomar decisões estratégicas."],
@@ -530,28 +586,33 @@ section[id]{scroll-margin-top:108px}
       ["Representação de Eventos e Feiras","Como atuar como representante de eventos e feiras: prospecção de expositores e participantes, negociação de estandes e patrocínios, relacionamento com organizadores e participação de empresas em feiras internacionais, com foco no corredor Angola–Brasil."]
     ]}
   ];
+  TRACKS.push({id:"con", name:"Conexões", short:"CON", h:300, courses:[]});
 
   /* cursos em destaque, conforme o mockup (carga horária e nível vêm da imagem) */
   var FEATURED = [
-    {id:"f1", img:"c1", tag:"Negócios Internacionais", color:"#2f6bf0", hours:"8h", level:"Intermediário",
+    {id:"f1", tr:"neg", img:"c1", tag:"Negócios Internacionais", color:"#2f6bf0", hours:"8h", level:"Intermediário",
      title:"Comércio Brasil-Angola: Oportunidades e Estratégias",
      summary:"Panorama das oportunidades comerciais entre Brasil e Angola e das estratégias para entrar e crescer nos dois mercados."},
-    {id:"f2", img:"c2", tag:"Marketing Digital", color:"#8a35d6", hours:"6h", level:"Iniciante",
+    {id:"f2", tr:"mkt", img:"c2", tag:"Marketing Digital e Vendas", color:"#8a35d6", hours:"6h", level:"Iniciante",
      title:"Estratégias de Marketing para o Mercado Africano",
      summary:"Como planejar comunicação, conteúdo e anúncios para chegar a clientes no mercado africano."},
-    {id:"f3", img:"c3", tag:"Inovação", color:"#4c9a2a", hours:"10h", level:"Todos os níveis",
+    {id:"f3", tr:"ia", img:"c3", tag:"Inteligência Artificial", color:"#4c9a2a", hours:"10h", level:"Todos os níveis",
      title:"Inteligência Artificial para Negócios",
      summary:"Uso prático da inteligência artificial para automatizar tarefas, criar conteúdo mais rápido e apoiar decisões do negócio."},
-    {id:"f4", img:"c4", tag:"Empreendedorismo", color:"#e0701f", hours:"6h", level:"Intermediário",
+    {id:"f4", tr:"emp", img:"c4", tag:"Empreendedorismo e Inovação", color:"#e0701f", hours:"6h", level:"Intermediário",
      title:"Liderança e Desenvolvimento Empresarial",
      summary:"Bases de liderança e gestão para quem conduz equipes e quer fazer a empresa crescer de forma sustentável."},
-    {id:"f5", img:"c5", tag:"Conexões", color:"#3b53d6", hours:"5h", level:"Iniciante",
+    {id:"f5", tr:"con", img:"c5", tag:"Conexões", color:"#3b53d6", hours:"5h", level:"Iniciante",
      title:"Diáspora e Negócios Brasil-Angola",
      summary:"Como a diáspora conecta pessoas, empresas e oportunidades entre Brasil e Angola."}
   ];
 
   var ALL = [];
+  function trk(id){ return TRACKS.filter(function(t){return t.id===id;})[0]; }
+  FEATURED.forEach(function(f){ f.track = trk(f.tr); ALL.push({id:f.id, title:f.title, summary:f.summary, track:f.track, img:f.img, hours:f.hours, level:f.level}); });
   TRACKS.forEach(function(t){ t.courses.forEach(function(c,i){ ALL.push({id:t.id+"-"+i, title:c[0], summary:c[1], track:t}); }); });
+  TRACKS.forEach(function(t){ t.count = ALL.filter(function(c){return c.track===t;}).length; });
+  ["n-cursos","stat-cursos"].forEach(function(k){ var e=document.getElementById(k); if(e) e.textContent = ALL.length; });
 
   var state = {track:"all", q:""};
   var lastFocus = null;
@@ -563,29 +624,22 @@ section[id]{scroll-margin-top:108px}
   var ICON_BARS  = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5b73b" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 19v-4M12 19V9M18 19V5"/></svg>';
   var ICON_ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 
-  function featuredCard(c){
-    return '<button type="button" class="card" data-open="'+c.id+'">'+
-      '<img class="pic" src="'+IMGS[c.img]+'" alt="">'+
-      '<span class="body"><span class="tag" style="--tg:'+c.color+'">'+esc(c.tag)+'</span>'+
-      '<span class="ttl">'+esc(c.title)+'</span>'+
-      '<span class="meta"><span>'+ICON_CLOCK+esc(c.hours)+'</span><span>'+ICON_BARS+esc(c.level)+'</span><span class="go">'+ICON_ARROW+'</span></span></span>'+
-    '</button>';
-  }
   function catalogCard(c){
     return '<button type="button" class="card" data-open="'+c.id+'" style="--h:'+c.track.h+'">'+
-      '<span class="art"><b>'+esc(c.track.short)+'</b></span>'+
-      '<span class="body"><span class="tag" style="--tg:hsl('+c.track.h+' 62% 42%)">'+esc(c.track.name)+'</span>'+
+      (c.img?'<img class="pic" src="'+IMGS[c.img]+'" alt="">':'<span class="art"><b>'+esc(c.track.short)+'</b></span>')+
+      '<span class="body"><span class="tag">'+esc(c.track.name)+'</span>'+
       '<span class="ttl">'+esc(c.title)+'</span>'+
-      '<span class="meta"><span>'+ICON_CLOCK+'1h a 1h30</span><span>Mentoria online</span><span class="go">'+ICON_ARROW+'</span></span></span>'+
+      '<span class="meta"><span>'+ICON_CLOCK+(c.img?esc(c.hours):'1h–1h30')+'</span><span>'+(c.img?esc(c.level):'Online')+'</span><span class="go">'+ICON_ARROW+'</span></span></span>'+
     '</button>';
   }
+  function featuredCard(f){ return catalogCard(ALL.filter(function(c){return c.id===f.id;})[0]); }
 
   function renderFeatured(){ document.getElementById("featured").innerHTML = FEATURED.map(featuredCard).join(""); }
 
   function renderChips(){
     var html = '<button type="button" class="chip" data-track="all" aria-pressed="'+(state.track==="all")+'">Todas ('+ALL.length+')</button>';
     TRACKS.forEach(function(t){
-      html += '<button type="button" class="chip" data-track="'+t.id+'" aria-pressed="'+(state.track===t.id)+'">'+esc(t.name)+' ('+t.courses.length+')</button>';
+      html += '<button type="button" class="chip" data-track="'+t.id+'" aria-pressed="'+(state.track===t.id)+'">'+esc(t.name)+' ('+t.count+')</button>';
     });
     document.getElementById("chips").innerHTML = html;
   }
@@ -607,14 +661,14 @@ section[id]{scroll-margin-top:108px}
 
   function renderTiles(){
     document.getElementById("tiles").innerHTML = TRACKS.map(function(t){
-      return '<button type="button" class="tile" style="--h:'+t.h+'" data-pick="'+t.id+'"><b>'+esc(t.short)+'</b><span>'+esc(t.name)+'<br>'+plural(t.courses.length,"curso","cursos")+'</span></button>';
+      return '<button type="button" class="tile" style="--h:'+t.h+'" data-pick="'+t.id+'"><i>'+esc(t.short)+'</i><b>'+esc(t.name)+'</b><span>'+plural(t.count,"curso","cursos")+'</span></button>';
     }).join("");
   }
 
   function renderEvents(){
     var ev = ALL.filter(function(c){return c.track.id==="evt";});
     document.getElementById("events").innerHTML = ev.map(function(c){
-      return '<article class="event"><div class="art">EVT</div><div class="txt"><span class="tag" style="--tg:#e0701f">Novo</span>'+
+      return '<article class="event"><div class="txt"><span class="ev-k">Eventos e Feiras</span>'+
         '<h3>'+esc(c.title)+'</h3><p>'+esc(c.summary)+'</p>'+
         '<button type="button" class="btn line" data-open="'+c.id+'">Ver detalhes</button></div></article>';
     }).join("");
@@ -766,6 +820,9 @@ section[id]{scroll-margin-top:108px}
   });
   q.addEventListener("keydown", function(ev){ if(ev.key === "Enter"){ go("cursos"); } });
 
+  var f2=document.getElementById("search2"), q2=document.getElementById("q2");
+  if(f2){ f2.addEventListener("submit",function(e){ e.preventDefault(); state.q=q2.value; renderCatalog(); });
+          q2.addEventListener("input",function(){ state.q=q2.value; renderCatalog(); }); }
   renderFeatured(); renderChips(); renderCatalog(); renderTiles(); renderEvents(); spy();
 })();
 </script>
