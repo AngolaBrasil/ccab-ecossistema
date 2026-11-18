@@ -2234,13 +2234,34 @@ window.AN_PODCAST = {
      chapters, transcript e summary também aceitam { pt: ..., en: ..., es: ..., fr: ... }. */
   episodes: [
     {
+      id: "ep-03",
+      type: "episode",
+      title: "Stela Santiago e Eduardo Arantes: oportunidades entre Brasil e Angola | Roda de Negrócios EP03",
+      date: "2026-11-17",   // estreia no YouTube em 17/11/2026
+      provider: "youtube",
+      videoId: "ZNlOogDYszk",
+      featured: true,
+      participants: ["everton-querido", "stela-santiago", "eduardo-arantes"],
+      description: {
+        pt: "No terceiro episódio do Roda de Negrócios, Everton Querido recebe Stela Santiago, Cônsul-Geral de Angola em São Paulo, e Eduardo Arantes, Presidente da Câmara de Comércio Angola Brasil. A conversa passa pela diplomacia e pela articulação empresarial entre os dois países: comércio bilateral, investimentos, missões empresariais, cultura e a comunidade angolana no Brasil.",
+        en: "In the third episode of Roda de Negrócios, Everton Querido welcomes Stela Santiago, Consul General of Angola in São Paulo, and Eduardo Arantes, President of the Angola Brazil Chamber of Commerce. The conversation covers diplomacy and business coordination between the two countries: bilateral trade, investment, trade missions, culture and the Angolan community in Brazil.",
+        es: "En el tercer episodio de Roda de Negrócios, Everton Querido recibe a Stela Santiago, Cónsul General de Angola en São Paulo, y a Eduardo Arantes, Presidente de la Cámara de Comercio Angola Brasil. La conversación aborda la diplomacia y la articulación empresarial entre los dos países: comercio bilateral, inversiones, misiones empresariales, cultura y la comunidad angoleña en Brasil.",
+        fr: "Dans le troisième épisode de Roda de Negrócios, Everton Querido reçoit Stela Santiago, Consule générale d'Angola à São Paulo, et Eduardo Arantes, Président de la Chambre de Commerce Angola Brésil. La conversation porte sur la diplomatie et la coordination économique entre les deux pays : commerce bilatéral, investissements, missions d'affaires, culture et communauté angolaise au Brésil."
+      },
+      tags: [
+        { pt: "Diplomacia", en: "Diplomacy", es: "Diplomacia", fr: "Diplomatie" },
+        { pt: "Comércio bilateral", en: "Bilateral trade", es: "Comercio bilateral", fr: "Commerce bilatéral" },
+        { pt: "Investimentos", en: "Investment", es: "Inversiones", fr: "Investissements" }
+      ]
+    },
+    {
       id: "ep-01",
       type: "episode",
       title: "RODA DE NEGRÓCIOS — EP. 01 | Brasil x Angola - Conectar, Negociar e Transformar",
       date: "2026-09-16",   // data informada: 16/09, quarta-feira, 19h (ano deduzido pelo dia da semana; confirme)
       provider: "youtube",
       videoId: "OKQeeR7_xyw",
-      featured: true,
+      featured: false,
       poster: "/assets/a05ae7cb745b6b.webp",
       participants: ["everton-querido", "katia-elaine", "ander-joao"],
       description: {
@@ -2264,7 +2285,9 @@ window.AN_PODCAST = {
   participants: [
     { id: "katia-elaine", name: "Kátia Elaine", role: "Podóloga" },
     { id: "ander-joao", name: "Ander João", role: { pt: "Estrategista Digital", en: "Digital Strategist", es: "Estratega Digital", fr: "Stratège numérique" } },
-    { id: "everton-querido", name: "Everton Querido", role: { pt: "Apresentador", en: "Host", es: "Presentador", fr: "Animateur" } }
+    { id: "everton-querido", name: "Everton Querido", role: { pt: "Apresentador", en: "Host", es: "Presentador", fr: "Animateur" } },
+    { id: "stela-santiago", name: "Stela Santiago", role: { pt: "Cônsul-Geral de Angola em São Paulo", en: "Consul General of Angola in São Paulo", es: "Cónsul General de Angola en São Paulo", fr: "Consule générale d'Angola à São Paulo" } },
+    { id: "eduardo-arantes", name: "Eduardo Arantes", role: { pt: "Presidente da Câmara de Comércio Angola Brasil", en: "President of the Angola Brazil Chamber of Commerce", es: "Presidente de la Cámara de Comercio Angola Brasil", fr: "Président de la Chambre de Commerce Angola Brésil" } }
   ],
 
   /* Notícias:
