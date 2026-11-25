@@ -2234,48 +2234,53 @@ window.AN_PODCAST = {
      chapters, transcript e summary também aceitam { pt: ..., en: ..., es: ..., fr: ... }. */
   episodes: [
     {
-      id: "clip-01", type: "clip", provider: "youtube", videoId: "JvS9lTKxhyA", date: "2026-11-18",
+      id: "clip-01", type: "clip", order: 8, provider: "youtube", videoId: "JvS9lTKxhyA", date: "2026-11-18",
       title: "Brasil foi o 1º país a reconhecer a independência de Angola | Stela Santiago",
       participants: ["stela-santiago"],
       description: { pt: "Corte do episódio 3 do Roda de Negrócios.", en: "Clip from episode 3 of Roda de Negrócios.", es: "Fragmento del episodio 3 de Roda de Negrócios.", fr: "Extrait de l'épisode 3 de Roda de Negrócios." }
     },
     {
-      id: "clip-02", type: "clip", provider: "youtube", videoId: "ASx8LwRtZPk", date: "2026-11-19",
+      id: "clip-02", type: "clip", order: 9, provider: "youtube", videoId: "ASx8LwRtZPk", date: "2026-11-19",
       title: "Brasileiro já pode ir para Angola sem visto de turista (até 30 dias)",
+      participants: ["stela-santiago"],
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-03", type: "clip", provider: "youtube", videoId: "hbl0Mpgc1Nc", date: "2026-11-07",
+      id: "clip-03", type: "clip", order: 1, provider: "youtube", videoId: "hbl0Mpgc1Nc", date: "2026-11-07",
       title: "Diaspora Business — Inteligência de Mercado para Brasileiros",
+      participants: ["ander-joao"],
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-04", type: "clip", provider: "youtube", videoId: "rJCliBrMdow", date: "2026-11-07",
+      id: "clip-04", type: "clip", order: 2, provider: "youtube", videoId: "rJCliBrMdow", date: "2026-11-07",
       title: "Angola no Brasil — Choque Cultural e Esperanças",
+      participants: ["ander-joao"],
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-05", type: "clip", provider: "youtube", videoId: "ndF3OZy_rdE", date: "2026-11-07",
+      id: "clip-05", type: "clip", order: 3, provider: "youtube", videoId: "ndF3OZy_rdE", date: "2026-11-07",
       title: "Como entrar no mercado africano com segurança",
+      participants: ["everton-querido"],
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-06", type: "clip", provider: "youtube", videoId: "B_fGBubSh54", date: "2026-11-07",
+      id: "clip-06", type: "clip", order: 7, provider: "youtube", videoId: "B_fGBubSh54", date: "2026-11-07",
       title: "Expo África Brasil 2026: programa, datas e foco em PMEs",
+      participants: ["joao-canda"],
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-07", type: "clip", provider: "youtube", videoId: "XRh-cj99zS0", date: "2026-11-07",
+      id: "clip-07", type: "clip", order: 4, provider: "youtube", videoId: "XRh-cj99zS0", date: "2026-11-07",
       title: "Não comece pelo produto — comece pela demanda",
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-08", type: "clip", provider: "youtube", videoId: "Y18QrtBr-gg", date: "2026-11-07",
+      id: "clip-08", type: "clip", order: 5, provider: "youtube", videoId: "Y18QrtBr-gg", date: "2026-11-07",
       title: "Angola: Acolhimento e Igualdade no Coração Brasileiro",
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
     {
-      id: "clip-09", type: "clip", provider: "youtube", videoId: "dCtEg_qGFX0", date: "2026-11-07",
+      id: "clip-09", type: "clip", order: 6, provider: "youtube", videoId: "dCtEg_qGFX0", date: "2026-11-07",
       title: "60 Segundos Para Convencer Investidores — Sua Melhor Tática",
       description: { pt: "Corte do Roda de Negrócios.", en: "Clip from Roda de Negrócios.", es: "Fragmento de Roda de Negrócios.", fr: "Extrait de Roda de Negrócios." }
     },
@@ -2430,7 +2435,7 @@ window.AN_PODCAST = {
       e.type = e.type === "clip" ? "clip" : "episode";
       e._poster = e.poster || ((e.videoId && !e.file) ? "https://i.ytimg.com/vi/" + e.videoId + "/hqdefault.jpg" : "");
       return e;
-    }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+    }).sort(function (a, b) { if (a.order != null && b.order != null) return a.order - b.order; return String(b.date || "").localeCompare(String(a.date || "")); });
     items.forEach(function (e) { byId[e.id] = e; });
     news = arr(D.news).filter(function (n) { return n && n.id && n.title; }).sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
     projects = arr(D.projects).filter(function (p) { return p && p.id && p.title; });
